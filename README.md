@@ -5,54 +5,116 @@
 ![Flask](https://img.shields.io/badge/Flask-Web_App-lightgrey?style=for-the-badge&logo=flask&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**Brain Tumor Detector** is a Deep Learning-based web application designed to automatically segment and detect brain tumors from MRI images. [cite_start]Built using the **U-Net architecture**, this system provides real-time analysis, visual overlays of tumor regions, and quantitative medical reports (tumor area & density) to assist medical professionals[cite: 38, 39, 171].
+**Brain Tumor Detector** is a deep learning-based web application designed to automatically segment and detect brain tumors from MRI images. Built using the **U-Net architecture**, this system provides real-time analysis, visual tumor overlays, and quantitative medical reports (tumor area & density) to assist medical professionals.
 
-[cite_start]This project was developed as a Final Project for the **Computer Vision** course at **Politeknik Negeri Semarang (POLINES)**[cite: 4, 13].
-
----
-
-## 📸 Demo & Screenshots
-
-### 1. Hero Section & Landing Page
-User-friendly interface with dark mode design for medical environments.
-![Hero Section](web_app/static/images/screenshot_hero.png)
-*(Note: Replace with your actual screenshot path inside your repository)*
-
-### 2. Detection Result (Tumor Detected)
-Accurate segmentation with red overlay and detailed quantitative dashboard.
-![Detection Result](web_app/static/images/screenshot_detection.png)
-
-### 3. Quantitative Analysis Dashboard
-Real-time calculation of tumor area ($cm^2$) and density percentage.
-![Dashboard](web_app/static/images/screenshot_dashboard.png)
+This project was developed as a Final Project for the **Computer Vision** course at **Politeknik Negeri Semarang (POLINES)**.
 
 ---
 
 ## ✨ Key Features
 
-* [cite_start]**🤖 Automated Segmentation:** Uses U-Net (CNN) to precisely pixel-wise segment tumor regions[cite: 35, 38].
-* **🩺 Medical Analysis Dashboard:**
-    * [cite_start]**Tumor Area Estimation:** Calculates physical size in $cm^2$[cite: 57].
-    * [cite_start]**Density Calculation:** Percentage of tumor tissue vs. healthy brain tissue[cite: 57].
-    * **Cluster Detection:** Counts separate tumor spots/lesions.
-* [cite_start]**⚡ High Performance:** Inference speed **< 0.5 seconds** on GPU (RTX 3050)[cite: 199, 330].
-* [cite_start]**🌐 Interactive Web Interface:** Built with **Flask** and **Tailwind CSS**, supporting Drag & Drop uploads[cite: 141, 189].
-* [cite_start]**🛡️ Error Handling:** Validates file formats and handles non-tumor images accurately (avoiding False Positives)[cite: 220].
+- 🤖 **Automated Segmentation** — Pixel-wise tumor segmentation using U-Net CNN  
+- 🩺 **Medical Analysis Dashboard**
+  - Tumor Area Estimation ($cm^2$)
+  - Tumor Density Calculation (%)
+  - Tumor Cluster Detection
+- ⚡ **High Performance** — Inference time < 0.5 seconds (GPU RTX 3050)
+- 🌐 **Interactive Web Interface** — Flask backend with Tailwind CSS frontend
+- 🛡️ **Error Handling** — Validates file formats and minimizes false positives
 
 ---
 
 ## 📂 Project Structure
 
-The repository is organized as follows:
-
 ```text
 Brain-Tumor-Segmentation-UNet/
-├── dataset/             # Raw LGG MRI Segmentation Dataset & Masks
-├── eval_graphs/         # Training performance plots (Loss, Accuracy, IoU, etc.)
-├── training_zone/       # Jupyter Notebooks & Scripts for Model Training
-├── web_app/             # Flask Application Source Code
-│   ├── static/          # CSS, JS, Images, and Uploaded Files
-│   ├── templates/       # HTML Templates (Hero, Detection, Result)
-│   └── app.py           # Main Flask Application Server
-├── requirements.txt     # Python Dependencies
-└── README.md            # Project Documentation
+├── dataset/              # Raw LGG MRI Dataset & Masks
+├── eval_graphs/          # Training performance plots
+├── training_zone/        # Jupyter Notebooks for training
+├── web_app/              # Flask Web Application
+│   ├── static/           # CSS, JS, Images, Uploads
+│   ├── templates/        # HTML Templates
+│   └── app.py            # Main Flask Server
+├── requirements.txt      # Python dependencies
+└── README.md             # Documentation
+```
+
+---
+
+## 🛠️ Tech Stack
+
+**Deep Learning:** Python, TensorFlow, Keras  
+**Architecture:** U-Net (Encoder–Decoder + Skip Connections)  
+**Image Processing:** OpenCV, NumPy, Pillow  
+**Web Backend:** Flask  
+**Frontend:** HTML5, Tailwind CSS, JavaScript  
+**Visualization:** Matplotlib, Seaborn  
+
+---
+
+## 📊 Model Performance
+
+Model trained on **LGG MRI Segmentation Dataset** for **20 epochs**.
+
+| Metric | Score | Description |
+|-------|-------|-------------|
+| Pixel Accuracy | **99.20%** | Overall pixel classification accuracy |
+| Dice Coefficient | **0.8710** | Segmentation similarity score (F1) |
+| Precision | **0.9450** | Low false positive rate |
+| Recall | **0.8500** | Sensitivity to tumor regions |
+| IoU Score | **0.7750** | Overlap accuracy |
+
+---
+
+## 🚀 Installation & Usage
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/Brain-Tumor-Segmentation-UNet.git
+cd Brain-Tumor-Segmentation-UNet
+```
+
+### 2️⃣ Create Virtual Environment (Recommended)
+```bash
+python -m venv venv
+```
+
+**Windows**
+```bash
+venv\Scripts\activate
+```
+
+**Mac/Linux**
+```bash
+source venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the Web Application
+```bash
+cd web_app
+python app.py
+```
+
+Open your browser and go to:  
+👉 **http://127.0.0.1:5000**
+
+---
+
+## 👤 Author
+
+**Muhammad Rafa Enrico**  
+Student ID: 4.33.24.2.15  
+Major: Computer Engineering Technology  
+State Polytechnic of Semarang
+
+---
+
+## 🤝 Acknowledgments
+
+- Ir. Prayitno, S.ST., M.T., Ph.D. — Computer Vision Lecturer  
+- Contributors of the **LGG MRI Segmentation Dataset (TCGA/Kaggle)**
