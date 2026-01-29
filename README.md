@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-lightgrey?style=for-the-badge&logo=flask&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 **Brain Tumor Detector** is a deep learning-based web application designed to automatically segment and detect brain tumors from MRI images. Built using the **U-Net architecture**, this system provides real-time analysis, visual tumor overlays, and quantitative medical reports (tumor area & density) to assist medical professionals.
