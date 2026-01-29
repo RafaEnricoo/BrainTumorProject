@@ -1,13 +1,13 @@
-# Abaikan folder dataset (biasanya ukurannya besar)
-dataset/
-__pycache__/
-*.pyc
+# # Abaikan folder dataset (biasanya ukurannya besar)
+# dataset/
+# __pycache__/
+# *.pyc
 
-# Abaikan file model yang terlalu besar (>100MB)
-# Kalau modelmu kecil (<100MB), hapus baris di bawah ini
-*.h5
+# # Abaikan file model yang terlalu besar (>100MB)
+# # Kalau modelmu kecil (<100MB), hapus baris di bawah ini
+# *.h5
 
-# Abaikan folder environment (kalau ada)
-venv/
-env/
-.vscode/
+# # Abaikan folder environment (kalau ada)
+# venv/
+# env/
+# .vscode/
